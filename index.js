@@ -36,7 +36,7 @@ app.post('/api/adduser', upload.single('photo'), async(req, res)=>{
         college: req.body.college,
         payment: req.body.payment,
         imageUrl: req.body.payment=="yes"?req.file.path:'',
-        step: req.body.payment=="yes"?"PAID":"REGOSTERED"
+        step: req.body.payment=="yes"?"PAID":"REGISTERED"
     });
 
     await user.save();
